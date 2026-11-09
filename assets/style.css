@@ -10,7 +10,7 @@
   --serif: "Source Serif 4", "Palatino Linotype", Palatino, Georgia, serif;
   --display: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
   --ease: cubic-bezier(.2, .7, .2, 1);
-  --wrap: 1040px;
+  --wrap: 1200px;
 }
 
 * { box-sizing: border-box; }
@@ -98,7 +98,7 @@ a:hover { color: var(--brown-dark); }
 
 /* Bio */
 .intro { padding-top: 48px; padding-bottom: 8px; }
-.bio { max-width: 820px; }
+.bio { max-width: 980px; }
 .bio p { margin: 0 0 18px; }
 
 /* Recent work */
@@ -205,6 +205,11 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
   html { scroll-behavior: auto; }
   .js .reveal, .js .hero-inner > * { opacity: 1; transform: none; transition: none; animation: none; }
 }
+
+/* Large screens: scale the whole design up so it fills wide monitors */
+@media (min-width: 1700px) { body { zoom: 1.15; } }
+@media (min-width: 2100px) { body { zoom: 1.35; } }
+@media (min-width: 2500px) { body { zoom: 1.5; } }
 
 /* Small screens */
 @media (max-width: 760px) {
