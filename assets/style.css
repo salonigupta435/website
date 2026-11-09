@@ -181,6 +181,20 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
 .photos figcaption { margin-top: 12px; font-size: 16px; line-height: 1.55; color: var(--ink); }
 .photos figcaption strong { display: block; margin-bottom: 2px; }
 
+/* Education journey (Teaching page) */
+.journey { position: relative; padding-left: 34px; }
+.journey::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--rule); }
+.stage { position: relative; margin-bottom: 44px; }
+.stage:last-child { margin-bottom: 0; }
+.stage::before {
+  content: ""; position: absolute; left: -34px; top: 7px; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--brown);
+}
+.stage-head { margin: 0 0 8px; color: var(--muted); }
+.stage-head strong { color: var(--brown); font-size: 20px; }
+.stage > p { margin-top: 0; }
+.stage .photos { margin-top: 20px; }
+
 /* Footer */
 .footer { background: var(--brown); color: var(--cream); font-size: 15px; line-height: 1.7; padding: 36px 0 40px; }
 .footer a { color: var(--cream); }
@@ -229,6 +243,8 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
   h1 { font-size: 40px; margin-bottom: 24px; }
   .page { padding-top: 32px; }
   .photos { grid-template-columns: 1fr; gap: 28px; }
+  .journey { padding-left: 26px; }
+  .stage::before { left: -26px; }
   .item summary { padding-right: 36px; }
   .abstract { padding-right: 0; }
 }
