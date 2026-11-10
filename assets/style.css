@@ -30,6 +30,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 html { scroll-behavior: smooth; }
+body { overflow-anchor: none; }
 a { color: var(--brown); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color .2s ease; }
 a:hover { color: var(--brown-dark); }
 

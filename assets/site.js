@@ -62,7 +62,9 @@ if (box) {
   if (!head) return;
   let slim = false;
   const update = () => {
-    const want = window.scrollY > 80;
+    // Two thresholds so the header cannot flip back and forth near one cut-off.
+    const y = window.scrollY;
+    const want = slim ? y > 40 : y > 240;
     if (want !== slim) { slim = want; head.classList.toggle('slim', slim); }
   };
   update();
