@@ -140,17 +140,25 @@ h2 {
   border-bottom: 1px solid var(--rule);
 }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px 40px; }
-.card { transition: transform .3s var(--ease); }
-.card h3 { font-size: 18px; line-height: 1.4; margin: 16px 0 8px; font-weight: 700; }
+.card {
+  display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+  transition: transform .35s var(--ease), box-shadow .35s ease, border-color .35s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .55); border-color: color-mix(in srgb, var(--brown) 45%, var(--rule)); }
+.js .card.reveal.in { transition: transform .35s var(--ease), box-shadow .35s ease, border-color .35s ease, opacity .8s var(--ease); }
+.js .card.reveal.in:hover { transform: translateY(-4px); }
+.card h3, .card p { padding: 0 20px; }
+.card p { padding-bottom: 22px; }
+.card h3 { font-size: 18px; line-height: 1.4; margin: 18px 0 8px; font-weight: 700; }
 .card h3 a { color: var(--brown); }
 .card p { margin: 0; font-size: 17px; line-height: 1.55; }
 .fig {
-  display: block; width: 100%; padding: 0; border: 1px solid var(--rule); border-radius: 4px;
-  background: var(--card); cursor: zoom-in; aspect-ratio: 16 / 9; overflow: hidden;
+  display: block; width: 100%; padding: 12px; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0;
+  background: #ffffff; cursor: zoom-in; aspect-ratio: 16 / 10; overflow: hidden;
   transition: box-shadow .35s ease, transform .35s var(--ease), border-color .35s ease;
 }
 .fig img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .5s var(--ease); }
-.card:hover .fig { transform: translateY(-4px); box-shadow: 0 22px 40px -22px rgba(70, 35, 22, .45); border-color: #d9c9c2; }
 .card:hover .fig img { transform: scale(1.03); }
 .fig:focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 
@@ -322,7 +330,9 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
 }
 :root[data-theme="dark"] .stage::before { background: var(--paper); }
 :root[data-theme="dark"] .headshot { box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .8); }
-:root[data-theme="dark"] .fig { background: #ffffff; }
+:root[data-theme="dark"] .fig { background: #f3eeeb; }
+:root[data-theme="dark"] .fig img { filter: brightness(.94) contrast(1.02); transition: transform .5s var(--ease), filter .3s ease; }
+:root[data-theme="dark"] .card:hover .fig img { filter: none; }
 :root[data-theme="dark"] .lightbox .close { background: #ece4df; color: #1c1c1c; }
 
 /* Small screens */
