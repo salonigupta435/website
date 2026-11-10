@@ -171,8 +171,12 @@ h2 {
 .card:hover .fig img { transform: scale(1.03); }
 .fig:focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 
+/* Fellowships and support (Home) */
+.support { padding-bottom: 64px; }
+.support p { margin: 0; max-width: 72ch; }
+
 /* Recent talks */
-.news { padding-top: 0; padding-bottom: 64px; }
+.news { padding-top: 0; padding-bottom: 48px; }
 .talks-wrap { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
 .talk-photo { margin: 0; }
 .talk-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; display: block; border: 1px solid var(--rule); }
@@ -227,6 +231,7 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
 .page h2 { margin-bottom: 18px; }
 .page h2 + .item summary { padding-top: 6px; }
 .fig.fig-inline { max-width: 640px; margin: 4px 0 16px; border: 1px solid var(--rule); border-radius: 8px; }
+.paper-links { font-family: var(--sans); font-size: 14.5px; line-height: 1.7; color: var(--muted); margin: 0 0 14px !important; }
 .abstract .sub { font-weight: 600; margin: 6px 0 4px; }
 .abstract ul { margin: 0 0 12px; padding-left: 22px; }
 .abstract li { margin: 2px 0; }
