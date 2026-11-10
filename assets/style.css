@@ -157,6 +157,7 @@ h2 {
 .card p { padding-bottom: 22px; }
 .card h3 { font-size: 18px; line-height: 1.4; margin: 18px 0 8px; font-weight: 700; }
 .card h3 a { color: var(--brown); }
+.card p.card-kicker { margin: -2px 0 6px; padding-bottom: 0; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
 .card p { margin: 0; font-size: 17px; line-height: 1.55; }
 .fig {
   display: block; width: 100%; padding: 12px; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0;
