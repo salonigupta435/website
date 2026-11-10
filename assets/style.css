@@ -142,18 +142,12 @@ h2 {
 .card:hover .fig img { transform: scale(1.03); }
 .fig:focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 
-/* News */
+/* Recent talks */
 .news { padding-top: 0; padding-bottom: 64px; }
-.news-item {
-  display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: center;
-  background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 18px;
-}
-.news-list { display: grid; gap: 16px; }
-.news-item.no-img { grid-template-columns: 1fr; padding: 18px 22px; }
-.news-item img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 5px; display: block; }
-.news-date { margin: 0 0 4px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--brown); }
-.news-item h3 { margin: 0 0 8px; font-family: var(--display); font-weight: 600; font-size: 28px; line-height: 1.2; }
-.news-item p:last-child { margin: 0; font-size: 17px; }
+.talks { list-style: none; margin: 0; padding: 0; }
+.talks li { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.talks li:last-child { border-bottom: 0; }
+.talk-date { color: var(--brown); font-weight: 600; }
 
 /* Inner pages */
 .page { padding-top: 48px; padding-bottom: 64px; }
@@ -336,8 +330,7 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
   h1 { font-size: 40px; margin-bottom: 24px; }
   .page { padding-top: 32px; }
   .photos { grid-template-columns: 1fr; gap: 28px; }
-  .news-item { grid-template-columns: 1fr; gap: 16px; }
-  .news-item h3 { font-size: 24px; }
+  .talks li { grid-template-columns: 56px 1fr; gap: 12px; }
   .masthead.slim .name { font-size: 26px; }
   .cite-box { flex-direction: column; }
   .journey { padding-left: 26px; }
