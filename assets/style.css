@@ -164,6 +164,10 @@ h2 {
 
 /* Recent talks */
 .news { padding-top: 0; padding-bottom: 64px; }
+.talks-wrap { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+.talk-photo { margin: 0; }
+.talk-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; display: block; border: 1px solid var(--rule); }
+.talk-photo figcaption { margin-top: 8px; font-size: 14.5px; color: var(--muted); font-style: italic; }
 .talks { list-style: none; margin: 0; padding: 0; }
 .talks li { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .talks li:last-child { border-bottom: 0; }
@@ -353,6 +357,7 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
   .page { padding-top: 32px; }
   .photos { grid-template-columns: 1fr; gap: 28px; }
   .talks li { grid-template-columns: 56px 1fr; gap: 12px; }
+  .talks-wrap { grid-template-columns: 1fr; gap: 20px; }
   .masthead.slim .name { font-size: 26px; }
   .cite-box { flex-direction: column; }
   .journey { padding-left: 26px; }
