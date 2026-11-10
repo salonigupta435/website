@@ -77,6 +77,18 @@ a:hover { color: var(--brown-dark); }
 }
 .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); }
 
+.nav { align-items: center; }
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; margin-left: 4px;
+  border: 1px solid rgba(251, 248, 246, .45); border-radius: 50%; background: transparent; cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover { background: rgba(251, 248, 246, .14); border-color: var(--white); }
+.theme-toggle:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: var(--white); stroke-width: 1.8; stroke-linecap: round; }
+.theme-toggle .i-moon { fill: var(--white); stroke: none; }
+:root[data-theme="dark"] .theme-toggle .i-moon, :root[data-theme="light"] .theme-toggle .i-sun { display: none; }
+
 /* Intro */
 /* Hero */
 .hero { background: linear-gradient(180deg, var(--hero-top) 0%, var(--paper) 100%); }

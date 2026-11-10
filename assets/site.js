@@ -83,3 +83,13 @@ document.querySelectorAll('.cite').forEach(c => {
     setTimeout(() => { copy.textContent = 'Copy'; }, 1800);
   });
 });
+
+// Dark / light switch (dark is the default; the choice is remembered in this browser).
+document.querySelectorAll('.theme-toggle').forEach(b => {
+  b.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+});
