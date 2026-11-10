@@ -222,7 +222,10 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
 .item-meta { font-family: var(--sans); font-size: 14.5px; line-height: 1.55; color: var(--muted); }
 .item-meta a { color: var(--brown); }
 .abstract { padding: 0 48px 22px 0; }
-.abstract p { margin: 0 0 10px; }
+.abstract p { margin: 0 0 10px; max-width: 72ch; }
+.abstract ul { max-width: 72ch; }
+.page h2 { margin-bottom: 18px; }
+.page h2 + .item summary { padding-top: 6px; }
 .fig.fig-inline { max-width: 640px; margin: 4px 0 16px; border: 1px solid var(--rule); border-radius: 8px; }
 .abstract .sub { font-weight: 600; margin: 6px 0 4px; }
 .abstract ul { margin: 0 0 12px; padding-left: 22px; }
