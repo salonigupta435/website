@@ -124,6 +124,10 @@ a:hover { color: var(--brown-dark); }
 .btn-solid:hover { background: var(--band-dark); color: var(--white); }
 .btn:focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 
+/* Bio: links read as plain text and reveal themselves on hover */
+.bio a.quiet { color: inherit; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .2s ease, text-decoration-color .2s ease; }
+.bio a.quiet:hover, .bio a.quiet:focus-visible { color: var(--brown); text-decoration-color: currentColor; }
+
 /* Bio */
 .bio p { margin: 0 0 12px; }
 
