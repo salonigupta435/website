@@ -52,3 +52,34 @@ if (box) {
     io.observe(el);
   });
 })();
+
+// Header slims down once the page is scrolled.
+(function () {
+  const head = document.querySelector('.masthead');
+  if (!head) return;
+  let slim = false;
+  const update = () => {
+    const want = window.scrollY > 80;
+    if (want !== slim) { slim = want; head.classList.toggle('slim', slim); }
+  };
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+})();
+
+// Cite buttons: show the citation and copy it.
+document.querySelectorAll('.cite').forEach(c => {
+  const btn = c.querySelector('.cite-btn');
+  const box = c.querySelector('.cite-box');
+  const copy = c.querySelector('.copy-btn');
+  btn.addEventListener('click', () => {
+    const open = box.hidden;
+    box.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  copy.addEventListener('click', async () => {
+    const text = c.querySelector('.cite-text').innerText;
+    try { await navigator.clipboard.writeText(text); copy.textContent = 'Copied'; }
+    catch (e) { copy.textContent = 'Select and copy'; }
+    setTimeout(() => { copy.textContent = 'Copy'; }, 1800);
+  });
+});
