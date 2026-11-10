@@ -218,6 +218,7 @@ h1 { font-family: var(--display); font-weight: 600; font-size: 52px; line-height
 .item-meta { font-style: italic; font-size: 17px; line-height: 1.5; }
 .abstract { padding: 0 48px 22px 0; }
 .abstract p { margin: 0 0 10px; }
+.fig.fig-inline { max-width: 640px; margin: 4px 0 16px; border: 1px solid var(--rule); border-radius: 8px; }
 .abstract .sub { font-weight: 700; margin: 6px 0 4px; }
 .abstract ul { margin: 0 0 12px; padding-left: 22px; }
 .abstract li { margin: 2px 0; }
